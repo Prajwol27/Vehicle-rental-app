@@ -1,0 +1,40 @@
+.about-us {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), 
+                url("../src/images/Abb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-text {
+    padding-bottom: 40px;
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+}
+

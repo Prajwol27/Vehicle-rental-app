@@ -1,0 +1,107 @@
+/* Login.css */
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .boxes {
+    width: 100%;
+  }
+  
+  .userForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .show h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .sub {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .userData {
+    width: 100%;
+  }
+  
+  .email, .password {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .email img, .password img {
+    margin-right: 10px;
+  }
+  
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .button1 {
+    width: 100%;
+  }
+  
+  .btn-text {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-text:hover {
+    background: #0056b3;
+  }
+  
+  .btn-text:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .signup {
+    margin-top: 15px;
+  }
+  
+  .signup a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup a:hover {
+    text-decoration: underline;
+  }

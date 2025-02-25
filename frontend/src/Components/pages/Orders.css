@@ -1,0 +1,75 @@
+.orders-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .bookings-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .booking-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-info {
+    margin-bottom: 15px;
+  }
+  
+  .booking-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .edit-button,
+  .delete-button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .edit-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .edit-button:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-button:hover {
+    background-color: #e53935;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  
+  .no-bookings {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+  }
+  
