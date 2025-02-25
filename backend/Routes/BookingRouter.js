@@ -11,7 +11,7 @@ const verifyToken = (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.userId = decoded.userId; // Attach userId to the request object
+    req.userId = decoded.userId; 
     next();
   } catch (error) {
     if (error.name === 'TokenExpiredError') {
@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
   try {
     const booking = new Booking({
       ...req.body,
-      userId: req.userId, // Attach userId to the booking
+      userId: req.userId,
     });
 
     await booking.save();
@@ -52,7 +52,7 @@ router.get('/vehicle/:vehicleId', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const bookings = await Booking.find({ userId: req.userId }).populate('vehicleId'); // Filter by userId to ensure user sees their own bookings
+    const bookings = await Booking.find({ userId: req.userId }).populate('vehicleId'); 
     res.status(200).json(bookings);
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
@@ -62,8 +62,7 @@ router.get('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const booking = await Booking.findOneAndUpdate(
-      { _id: req.params.id, userId: req.userId }, // Ensure only the user can update their own booking
-      req.body,
+      { _id: req.params.id, userId: req.userId },
       { new: true, runValidators: true }
     );
 
@@ -80,12 +79,14 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete a booking
+
+
+
 router.delete('/:id', async (req, res) => {
   try {
     const booking = await Booking.findOneAndDelete({
       _id: req.params.id,
-      userId: req.userId, // Ensure the booking belongs to the authenticated user
+      userId: req.userId,
     });
 
     if (!booking) {
